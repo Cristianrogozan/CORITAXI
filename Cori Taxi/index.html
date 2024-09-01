@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORI Taxi</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/fe44bdf8db.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.0/css/pikaday.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.13.18/jquery.timepicker.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Madimi+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5c54883370.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+
+
+  <!----------------------------------------------------------------------------------------------------------------------------------------navbar-->
+  <nav class="nav-bar" id="navbar">
+    <div class="container-fluid">
+   
+        <ul class='nav-bar'>
+          
+            <li class='logo'><a href='#'><img src='./images/logo.png'/></a></li>
+            <button class="callbutton">
+              <svg class="svgIcon" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <title>call [#192]</title>
+                  <desc>Created with Sketch.</desc>
+                  <defs></defs>
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Dribbble-Light-Preview" transform="translate(-103.000000, -7321.000000)" fill="#000000">
+                      <g id="icons" transform="translate(56.000000, 160.000000)">
+                        <path d="M61.7302966,7173.99596 C61.2672966,7175.40296 59.4532966,7176.10496 58.1572966,7175.98796 C56.3872966,7175.82796 54.4612966,7174.88896 52.9992966,7173.85496 C50.8502966,7172.33496 48.8372966,7169.98396 47.6642966,7167.48896 C46.8352966,7165.72596 46.6492966,7163.55796 47.8822966,7161.95096 C48.3382966,7161.35696 48.8312966,7161.03996 49.5722966,7161.00296 C50.6002966,7160.95296 50.7442966,7161.54096 51.0972966,7162.45696 C51.3602966,7163.14196 51.7112966,7163.84096 51.9072966,7164.55096 C52.2742966,7165.87596 50.9912966,7165.93096 50.8292966,7167.01396 C50.7282966,7167.69696 51.5562966,7168.61296 51.9302966,7169.09996 C52.6632966,7170.05396 53.5442966,7170.87696 54.5382966,7171.50296 C55.1072966,7171.86196 56.0262966,7172.50896 56.6782966,7172.15196 C57.6822966,7171.60196 57.5872966,7169.90896 58.9912966,7170.48196 C59.7182966,7170.77796 60.4222966,7171.20496 61.1162966,7171.57896 C62.1892966,7172.15596 62.1392966,7172.75396 61.7302966,7173.99596 C61.4242966,7174.92396 62.0362966,7173.06796 61.7302966,7173.99596" id="call-[#192]"></path>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+              <span style="font-weight: 600;">Call Us! 01935592319</span>
+            </button>
+          
+            <ul>
+            <input type='checkbox' id='check' />
+            <span class="menu">
+                <li><a href="">Home</a></li>
+                <li><a href="#serviceContainer" id="servicesLink">Services</a></li> 
+                <li><a href="#containerVehicles" id="toggleVehicles">Vehicles</a></li>
+                <li><a href="#aboutUsFullContainer" id="toggleAboutUsFullMenu">About Us</a></li>
+                <li><a href="#contactContainer">Contact</a></li>
+                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+            </span>
+            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+        </ul>
+
+    </div>
+  </nav>
+
+
+<!-------------------------------------------------------------------------------------------------------------------------------container  welcome-->
+<div class="container-fluid welcome">
+  <div class="row justify-content-center">
+    <div class="col-lg-10 col-md-12">
+      <h1 id="title">WELCOME TO <span style="color: #fec721d8;"> Cori Taxi</span></h1>
+      <p id="description">Your safety, our priority.</p>
+    </div>
+  </div>
+</div>
+
+
+<!---------------------------------------------------------------------------------------------------------------------------------container  main booking form-->
+<div class="overlay" id="overlay"></div>
+<form class="hidden-container" id="booking-form-container">
+  <button type="button" class="close-button" id="close-button">&times;</button>
+  <br>
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 form-content">
+      <br>
+      <h3 id="booktitle">BOOK YOUR RIDE</h3>
+      <div class="from-to-container">
+        <input type="text" name="from" placeholder="From (Address or Post Code)">
+        <input type="text" name="to" placeholder="To (Address or Post Code)">
+      </div>
+
+      <div class="date-time-container">
+        <input type="text" id="date-input" placeholder="Date">
+        <input type="time" id="time-input" name="time">
+      </div>
+      <br>
+      <input type="text" name="nume" placeholder="Name">
+      <input type="tel" name="phone" placeholder="Phone Number">
+      <input type="text" name="postcode" placeholder="Post Code">
+      <input type="email" name="email" placeholder="Email">
+      <br>
+      <textarea id="thoughts2" name="text" autocomplete="off" placeholder="Additional notes..."></textarea>
+      <br>
+      <div class="submit-container">
+        <input type="submit" class="submitbutton" value="Submit">
+      </div>
+    </div>
+  </div>
+</form>
+
+
+<!----------------------------------------------------------------------------------------------container  what we offer-->
+<div class="container-fluid offers">
+  <div class="row justify-content-center align-items-center offersrow">
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 offerscolumn">
+          <i id="offersicon" class="fa-solid fa-circle-chevron-right"></i>
+          <p id="offerstext">24/7 services available</p>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 offerscolumn">
+          <i id="offersicon" class="fa-solid fa-circle-chevron-right"></i>
+          <p id="offerstext">We make safety a priority</p>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 offerscolumn">
+          <i id="offersicon" class="fa-solid fa-circle-chevron-right"></i>
+          <p id="offerstext">Male / Female drivers</p>
+      </div>
+  </div>
+  
+
+  <div class="row justify-content-center align-items-center offersrow">
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 offerscolumn">
+          <i id="offersicon" class="fa-solid fa-circle-chevron-right"></i>
+          <p id="offerstext">Linked With Airports/Seaports</p>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 offerscolumn">
+          <i id="offersicon" class="fa-solid fa-circle-chevron-right"></i>
+          <p id="offerstext">Fully licensed with DBS clearance</p>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 offerscolumn">
+          <i id="offersicon" class="fa-solid fa-circle-chevron-right"></i>
+          <p id="offerstext">Discrete executive travel</p>
+      </div>
+  </div>
+</div>
+
+
+<!------------------------------------------------------------------------------------------container  How it works?-->
+<div class="container-fluid howitworks">
+  <div class="row justify-content-center">
+
+    <div class="col-xl-6 col-lg-7 col-md-6 col-sm-5 steps">
+      <h2 id="servicetitle">How It Works</h2>
+      <p id="paragraph">Ready to experience the convenience and reliability of our services? Simply select one of your preferred options below and complete the easy form to submit your booking. We'll take care of the rest, ensuring you reach your destination safely and comfortably.
+      </p>
+    </div>
+    <div class="col-xl-4 col-lg-5 col-md-6 col-sm-7 icons">
+      <div id="one">
+      <i id="icons" class="fa-solid fa-chalkboard-user"></i>
+      <h2 id="icontext">Book in just 2 Tabs</h2>
+      </div>
+      <div id="two">
+      <i id="icons" class="fa-solid fa-user-tie"></i>
+      <h2 id="icontext">Get a Driver</h2>
+      </div>
+      <div id="three">
+      <i id="icons" class="fa-solid fa-heart-circle-check"></i>
+      <h2 id="icontext">Enjoy your ride</h2>
+      </div>
+      <div id="four">
+      <i id="icons" class="fa-solid fa-location-dot"></i>
+      <h2 id="icontext">Arrive safely</h2>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<!----------------------------------------------------------------------------------------------------------------------------------container  quick-rides-->
+<div class="container quickrides">
+
+<div class="row justify-content-center quickicons">
+  <div class="col-xs-6 col-sm-12 col-md-12 col-lg-4 quickcontainers">
+    <i id="quick" class="fa-solid fa-taxi"></i>
+      <h3 id="icon-text">Quick trips</h3>
+      <p id="icon-info">Quick trips in and arround Somerset area. You can book a ride on our website or give us a call.</p>
+      <a class="booknow" href="#" target="_blank">BOOK NOW</a>
+    </div>
+    <div class="col-xs-6 col-sm-12 col-md-12 col-lg-4 quickcontainers">
+      <i id="plane" class="fa-solid fa-plane-arrival"></i>
+      <i id="ship" class="fa-solid fa-ship"></i>
+      <h3 id="icon-text">Airport/Seaport transfers</h3>
+      <p id="icon-info">Save money on airport and seaport parking and travel in style with our dedicated transfer service.</p>
+      <a class="booknow" href="#" target="_blank">BOOK NOW</a>
+    </div>
+    <div class="col-xs-6 col-sm-12 col-md-12 col-lg-4 quickcontainers">
+      <i id="car" class="fa-solid fa-user-tie"></i>
+      <h3 id="icon-text">Designated driver</h3>        
+      <p id="icon-info">We provide you with a responsible driver to chauffeur you and your close ones to various events.</p>
+     <a class="booknow" href="#" target="_blank">BOOK NOW</a>
+    </div>
+  </div>
+
+</div>
+
+
+
+<!----------------------------------------------------------------------------------------------------------------------------------------container  about us-->
+<div class="container-fluid aboutus justify-content-center">
+  <div class="row justify-content-center">
+      <div class="col-xl-5 col-lg-6 col-md-9">
+        <img src="images/taxidark.jpg" width="350px" height="400px">
+      </div>
+      <div class="col-xl-5 col-lg-6 col-md-12">
+        <h2 id="servicetitle">About Us</h2>
+        <p id="paragraph">We are primarily located and operate within Yeovil, UK, serving as a central hub for our transportation services. Our reach extends beyond Yeovil, encompassing various neighboring areas to ensure accessibility and convenience for our valued customers. In addition to Yeovil, our services cover a wide range of surrounding locations. At Cori Taxi, we are committed to delivering exceptional service that exceeds expectations, ensuring your journey is comfortable, safe, and stress-free.</p>
+        <a class="readmore" href="#aboutUsFullContainer" id="toggleAboutUsFull">Read More</a>
+      </div>
+  </div>
+  </div>
+
+
+
+<!--------------------------------------------------------------------------------------------------------------------------------------- hidden container  about us full-->
+<div id="aboutUsFullContainer" class="container-fluid aboutusfull">
+  <div class="row justify-content-center">
+
+    <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12">
+      <img id="taxiservice" src="images/taxi2.jpg" alt="Taxi Service">
+    </div>
+
+    <div class="col-xl-6 col-lg-4 col-md-12 col-sm-12">
+      <h2 id="servicetitle2">About Us</h2>
+      <p id="paragraphfull">Welcome to Cori Taxi, where convenience meets reliability. Our fleet of well-maintained vehicles and professional drivers are at your service 24/7, ensuring a safe and comfortable journey to your destination. Whether you need a ride to the airport, a quick trip across town, or a designated driver for a night out, we've got you covered. With competitive rates, easy booking options, and a commitment to punctuality, our service is the go-to choice for all your transportation needs. Experience the difference with us today!
+        <br><br>
+       Cori Taxi is a shining example of reliability and professionalism in the transport industry. We pride ourselves on offering a friendly and welcoming service to all our customers, ensuring a safe and comfortable journey every time. Our drivers are highly trained and dedicated to providing the best possible experience for our passengers. With us, you can rest assured that you are in good hands, as we take your safety and satisfaction seriously. Experience the difference with our taxi company - where every ride is a smooth and enjoyable one!
+        <br><br>
+        Cori Taxi is a premier transportation company that prioritizes the safety and satisfaction of its customers above all else.
+
+        One of the key pillars of Cori Taxi is our unwavering commitment to customer safety. We understand the importance of feeling secure during your journey, which is why we go above and beyond to ensure that all our vehicles are well-maintained and our drivers are highly trained. Our team values your well-being and takes every precaution to guarantee a safe and comfortable ride, no matter the distance.
+     
+       We take pride in our diverse team of experienced female and male drivers. Our drivers are not only skilled professionals but also friendly and courteous individuals who are dedicated to providing exceptional service. Whether you're in need of a quick local trip or a long-distance transfer, our drivers will always go the extra mile to make your journey pleasant and stress-free.
+    
+        When you choose Cori Taxi, you are selecting a transportation partner that puts your safety and satisfaction first. Experience the difference with Cori Taxi - where every ride is a reliable and enjoyable one!
+      </p>
+    </div>
+
+    <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12">
+      <img id="taxiservice" src="images/taxi.jpg" alt="Taxi Service">
+    </div>
+
+
+  </div>
+</div>
+
+
+
+<!------------------------------------------------------------------------------------------------------------------hidden container  Services-->
+<div id="serviceContainer" class="container-md ourservices"> 
+
+  <div class="row justify-content-center one">
+<div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+  <img id="serviceimage" src="images/IMG_0580.JPG">
+</div>
+<div class="col-xl-6 col-lg col-md-9 col-sm-12">
+  <h2 id="servicetitle">Quick trips</h2>
+  <p id="paragraph">Quick trips with our taxi service offer more than just a ride; they provide a seamless and convenient solution for navigating the town's hustle and bustle. Whether you're rushing to catch a meeting, heading to the airport for a last-minute flight, or simply need to get across town efficiently, our quick trip service ensures you'll reach your destination with time to spare. Our experienced drivers are familiar with the best routes to avoid traffic jams and ensure a swift journey, while our modern fleet of vehicles guarantees both comfort and reliability. With our quick trips, you can say goodbye to the stress of navigating town streets and focus on what matters most to you.</p>
+  <a class="booknow" href="#" target="_blank">BOOK NOW</a>
+</div>
+  </div>
+
+<div class="row justify-content-center two">
+  <div class="col-xl-6 col-lg col-md-9 col-sm-12">
+    <h2 id="servicetitle">Airport/Seaport transfers</h2>
+    <p id="paragraph">Airport and seaport transfers are more than just a ride to catch your flight or board your ship; they're a seamless and stress-free solution for your entire travel experience. Whether you're arriving at the airport or seaport after a long journey or need to catch a flight or cruise for an important business trip or vacation, our transfer service ensures you'll arrive on time and in comfort. Our professional drivers are well-versed in airport and seaport logistics and will ensure a smooth transition from your doorstep to the terminal or port, taking care of any luggage or special requirements along the way. With our transfer service, you can relax and enjoy the journey, knowing that your travel plans are in safe hands.</p>
+    <a class="booknow" href="#" target="_blank">BOOK NOW</a>
+  </div>
+  <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+    <img id="serviceimage" src="images/gbf3rk5r.png">
+  </div>
+</div>
+
+<div class="row justify-content-center three">
+  <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+    <img id="serviceimage" src="images/img-driversseat.png">
+  </div>
+  <div class="col-xl-6 col-lg col-md-9 col-sm-12">
+    <h2 id="servicetitle">Designated driver</h2>
+    <p id="paragraph">Our designated driver service is more than just a safe ride home after a night out; it's a commitment to ensuring your well-being and peace of mind. Whether you're celebrating a special occasion with friends, attending a social event, or simply enjoying a night on the town, our designated drivers are here to ensure you get home safely. Our team of professional drivers is trained to prioritize your safety above all else, providing a reliable and comfortable journey home. With our designated driver service, you can indulge in the festivities without worrying about the journey home, knowing that you're in good hands every step of the way.</p>
+    <a class="booknow" href="#" target="_blank">BOOK NOW</a>
+  </div>
+</div>
+
+
+  </div>
+
+
+
+<!----------------------------------------------------------------------------------------------hidden container  vehicles-->
+<div id="containerVehicles" class="container-fluid vehicles">
+  <div class="row vehicleimages">
+
+
+    <div class="col-xl-4 col-lg-12 col-md-12">
+      <div class="containercar">
+        <img src="images/vechicles/car3.jpg" height="500px" width="500px" class="image">
+        <div class="overlaycar">
+          <div class="text">
+            <h3 id="overlaytitle">Passat SE BUSINESS TDI BLUEMOTION TEC</h3>
+            <p id="overlayinfo">Experience dependable and elegant passenger transportation with our Passat BUSINESS BLUEMOTION taxi. Its spacious and well-appointed interior ensures a smooth and pleasant journey for all riders. Equipped with advanced safety technologies, this vehicle offers utmost security and peace of mind during travel. Combining refined design with excellent performance, our taxi provides a premium transport experience ideal for anyone seeking comfort and reliability.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="col-xl-4 col-lg-12 col-md-12 vehiclesdescription">
+        <h2 id="vehiclestitle">Our Vehicles</h2>
+          <p id="vehiclesinfo">Welcome to our Vehicles Page!
+            Discover our reliable and comfortable taxis, meticulously designed to meet your transportation needs with style and efficiency. We pride ourselves on offering a selection of vehicles that ensure your journey is safe, convenient, and enjoyable.
+            <br>
+            Each car at CORI Taxi undergoes meticulous maintenance to uphold the highest standards of cleanliness and safety. Whether you're traveling for business or leisure, you can trust us to deliver a consistently comfortable and efficient ride, ensuring you arrive at your destination refreshed and on time.
+            Contact us today to book your next trip or to learn more about our vehicles and services. Our friendly and professional team is here to assist you in planning your journey and ensuring your transportation needs are met seamlessly. We look forward to serving you and making your travel with CORI Taxi a memorable and stress-free experience.
+          </p>
+      </div>
+
+      <div class="col-xl-4 col-lg-12 col-md-12">
+        <div class="containercars">
+          <img src="images/vechicles/audi2.jpeg" height="500px" width="500px" class="images">
+          <div class="overlays">
+            <div class="texts">
+              <h3 id="overlaytitle">Audi A6 S-LINE</h3>
+              <p id="overlayinfo">Our Audi A6 S-line taxi is a reliable and stylish choice for transporting passengers. Its luxurious interior provides a comfortable and enjoyable ride for our customers. The advanced safety features of the car ensure a secure journey for our passengers. With its sleek design and top-notch performance,  Audi A6 is a great option for those seeking a premium transportation experience.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     
+  </div>
+</div>
+
+
+
+<!----------------------------------------------------------------------------------------------container  contact-->
+<div class="container-fluid contact" id="contactContainer">
+
+<div class="row justify-content-center">
+
+<div class="col-sm-12 col-lg-8 col-md-12">
+  <div id="map"><iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46470.06175075898!2d-2.6851622510432707!3d50.94505966574034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487214c92446a7b5%3A0x9d6e9767b709360d!2sYeovil%2C%20UK!5e0!3m2!1sen!2sus!4v1715807728839!5m2!1sen!2sus" width="100%" height="500" style="border:0.5px solid #000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
+<div class="col-sm-10 col-lg-4 col-md-10">
+  <form id="contact-form">
+    <textarea id="thoughts" name="text" autocomplete="off" placeholder="Share your thoughts!"></textarea>
+    <br><br>
+    <input type="text" name="nume" placeholder="Name">
+    <input type="email" name="email" placeholder="Email">
+    <input type="tel" name="phone" placeholder="Phone Number">
+    <br>
+    <input type="submit" class="submitbutton" value="Submit">
+  </form>
+</div>
+
+</div>
+
+<div class="row justify-content-center">
+
+  <div class="col-lg-8 col-md-12 col-sm-12 contactboxes d-flex align-items-center justify-content-center">
+
+    <div class="contactboxesone">
+      <i id="contacticon" class="fa-solid fa-phone"></i>
+      <p id="contactinfo">Phone Number</p>
+      <h2 id="contactinfos">01935592319/07492252565</h2>
+    </div>
+
+      <div class="contactboxestwo">
+      <i id="contacticon" class="fa-solid fa-envelope"></i>
+      <p id="contactinfo">Email</p>
+      <h2 id="contactinfos">coritaxi247@gmail.com</h2>
+    </div>
+
+     <div class="contactboxesthree">
+      <i id="contacticon" class="fa-solid fa-location-dot"></i>
+      <p id="contactinfo">Address</p>
+      <h2 id="contactinfos">North Street Martock TA12 6DH</h2>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-12 col-sm-12 d-flex align-items-center justify-content-center">
+  <div class="socialbuttons">
+    <h2 id="socialfollow">Follow us!</h2>
+    <a href="https://www.facebook.com/profile.php?id=61556508644925" id="faa" class="fa fa-facebook"></a>
+    <a href="https://g.co/kgs/5wvA2GM" target="_blank" id="faa" class="fa fa-google"></a>
+
+   </div>
+</div>
+
+</div>
+
+
+
+</div>
+
+
+
+
+    <!----------------------------------------------------------------------------------------------container   reviews-->
+
+    <div class="container-fluid reviews">
+      <div class="row reviewsrow">
+
+        <h2 id="reviewtitle">WHAT OUR CUSTOMERS THINK</h2>
+
+
+        <div class="review-card">
+          <img class="people" src="images/people/OIP.jpeg">
+          <p id="peoplesnames">Yasmin Ahmed</p>
+          <a class="viagoogle" href="https://g.co/kgs/5wvA2GM" target="_blank">Via google</a>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <h2 class="paragraph">"Such a great experience"</h2>
+          <p class="reviewtext">"Such a great experience, very comfortable and clean car. Calin was so friendly and lovely helping me with the village I was visiting and some great stories too! Good prices compared to others around. Will absolutely book with him if I visit again and definitely recommend!!"</p>
+        </div>
+
+    
+        <div class="review-card">
+          <img class="people" src="images/people/1204972302.jpg.0.jpg">    
+          <p id="peoplesnames">James Sartin</p>
+          <a class="viagoogle" href="https://g.co/kgs/5wvA2GM" target="_blank">Via google</a>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <h2 class="paragraph">"Helpful and accommodating"</h2>
+          <p class="reviewtext">"Both cars are very clean and comfortable. They could not be more helpful and accommodating, nothing is too much trouble. My go to taxi drivers👍🏻"</p>    
+        </div>
+
+
+        <div class="review-card">
+          <img class="people" src="images/people/OIP (1).jpeg">
+          <p id="peoplesnames">Chris Puxley</p>
+          <a class="viagoogle" href="https://g.co/kgs/5wvA2GM" target="_blank">Via google</a>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <h2 class="paragraph">"Arrived quicker than promised"</h2>
+          <p class="reviewtext">"Serendipitously ended up with the same car for both legs of my journey, with two different drivers. Arrived promptly (quicker than promised), smart and clean car, friendly chat and swiftly delivered to the station in time for my train."</p>
+        </div>
+
+
+      </div>
+    </div>
+    
+
+
+<!----------------------------------------------------------------------------------------------container   mobile app-->
+
+    <div class="container-fluid mobileapp">
+      <div class="row align-items-center justify-content-center">
+
+
+        <div class="col-lg-3 col-md-7 col-sm-6">
+          <img id="mp" src="images/mobile.jpg">
+        </div>
+
+      <div class="col-lg-4 col-md-5 col-sm-6">
+      <h2 id="appone">Coming Soon...</h2>
+      <h3 id="apptwo">For Smaller Devices!</h3>
+      <h4 id="appthree">The Cori Taxi App</h4>
+      <img id="gp" src="images/googleplay.png">
+      </div>
+
+
+      </div>
+  </div>
+
+
+
+
+<!----------------------------------------------------------------------------------------------container  protocols-->
+    <div class="container-fluid protocols">
+      <div class="row">
+
+  <div class="col-lg-3 col-md-3 col-sm-12">
+    <img id= "safety" src="images/safetyfirst.png">
+  </div>
+
+ 
+
+
+  <div class="col-lg-8 col-md-8 col-sm12">
+    <section>
+        <h2 id="protone">Our Safety Standards</h2>
+        <p>Your safety is our top priority. We ensure that every ride you take with us meets the highest standards of safety and security.</p>
+        <ul id="prottwo">
+            <li><strong>Driver Background Checks:</strong> All our drivers undergo thorough background checks and are vetted for criminal history and driving records.</li>
+            <li><strong>Vehicle Inspections:</strong> Our vehicles are regularly inspected to ensure they meet safety and maintenance standards.</li>
+            <li><strong>In-Car Safety Features:</strong> All cars are equipped with safety features such as airbags, ABS, and GPS tracking to ensure a secure ride.</li>
+        </ul>
+    </section>
+
+    <section>
+      <h2 id="protone">COVID-19 Safety and Hygiene Protocols</h2>
+      <p>In response to the COVID-19 pandemic, we have implemented rigorous safety and hygiene protocols. These measures are activated only if the UK is in an emergency COVID-19 state, ensuring your safety during such times.</p>
+      <ul id="prottwo">
+          <li><strong>Regular Sanitization:</strong> When activated, vehicles are sanitized before and after every ride, with special attention to high-touch areas like door handles, seat belts, and seats.</li>
+          <li><strong>Driver Health Checks:</strong> Drivers undergo daily health screenings and are required to wear masks at all times during rides in emergency states.</li>
+          <li><strong>Hand Sanitizers:</strong> Hand sanitizers are made available in all vehicles for passengers during these periods.</li>
+          <li><strong>Contactless Payment:</strong> We encourage contactless payments to minimize physical interaction when these protocols are in effect.</li>
+      </ul>
+      <p>Please note that these protocols are dynamic and will be reinstated as necessary to align with government guidelines during an emergency COVID-19 situation.</p>
+  </section>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+<!----------------------------------------------------------------------------------------------hidden container   booking terms-->
+  <div id="bookingtermscontainer" class="container-fluid bookingterms">
+    <div class="row">
+  
+      <section id="footersection">
+        <h2 id="footertitles">Booking Terms</h2>
+        Refund will not be given to passengers who do not wait for their allocated driver and use alternative transport facility.
+Please make sure that all your pick up dates and times are in UK time zone and not of the departure airports.
+If your flight has any serious delays please inform us or the driver as soon as possible.
+
+The driver is within his rights to ask for advance payments for cash journeys exceeding 10 miles if he feels it necessary to do so.
+If the information provided by the customer during online booking form is not enough then every effort will be made to contact the customer to acquire missing information. If we can’t make contact with the customer for clarification, then any such bookings will remain unconfirmed.
+<br><br>
+
+<p><strong>In-Cab Card Terminal Charges</strong></p>
+ 
+Minimum card payment is £10 .
+There are no extra transaction charges for paying in the cab with your card, as long as the card is either registered in UK or EEA European Economic Area.
+
+All Non European Cards and Corporate Cards will incur a surcharge of 2.5%.
+
+
+Cancellation Policy/Cancellation charges
+
+You can cancel your bookings at anytime, however charges will apply as follows.
+Cancellation before 48 hours to the pickup time - Full Refund
+Cancellations between 12 to 48 hours before pickup time - admin charges of 20% will apply.
+Cancellations within 12 hours to pick up time or afterwards – No Refunds
+All cancellations should be made via email only.
+If the passenger doesn’t show up for whatever reason, no refund will be issued.
+By booking with us, you agree to our terms and conditions.
+
+      </section>
+
+    </div>
+  </div>
+
+
+
+  <!----------------------------------------------------------------------------------------------hidden container   privacy policy-->
+  <div id="privacypolicycontainer" class="container-fluid privacypolicy">
+    <div class="row">
+        <section id="footersection">
+            <h2 id="footertitles">Privacy Policy</h2>
+            <p>
+                We may make changes to this Privacy Policy from time to time. We will notify all members of any such changes, which will also be updated on our website and in this text so you are always aware of them.
+        
+                "Personal Information” When making a booking to use our service, no information is collected by our website. Any information provided to us by you when making a booking of our service is retained in an internal system.
+          
+                With your consent we reserve the right to release Personal Information. To comply with the law. To enforce our Terms and Conditions. To protect our rights and safety. No information is otherwise sold, leased or exchanged with a third party.
+          
+                Cori Taxi will not take any responsibility for any of our passengers missing their Flights/Trains/Cruise Ships due to the Taxi not arriving at the pick-up address at booked time due to unforeseeable circumstances such as traffic conditions, adverse weather, or road traffic accidents or road closures. Such factors are totally out of our control.
+       
+                We will not take any responsibility for any of our passengers missing their Flights/Trains/Cruise Ships due to the Taxi not arriving at the pick-up address at booked time due to unforeseeable circumstances such as traffic conditions, adverse weather, or road traffic accidents or road closures. Such factors are totally out of our control.
+            </p>
+        </section>
+    </div>
+</div>
+
+
+
+  <!----------------------------------------------------------------------------------------------hidden container   terms and conditions-->
+  <div id="termsandconditionscontainer" class="container-fluid termsandconditions">
+    <div class="row">
+        <section id="footersection">
+            <h2 id="footertitles">Terms and Conditions</h2>
+            <p>
+             <strong>Welcome to Cori Taxi!</strong>
+              These terms and conditions outline the rules and regulations for the use of Cori Taxi's Website, located at www.coritaxi.co.uk.
+              By accessing this website we assume you accept these terms and conditions. Do not continue to use Cori Taxi if you do not agree to take all of the terms and conditions stated on this page.
+              The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company's terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client's needs in respect of provision of the Company's stated services, in accordance with and subject to, prevailing law of GB. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.
+              This Agreement shall begin on the date hereof. 
+              Parts of this website offer an opportunity for users to post and exchange opinions and information in certain areas of the website. Cori Taxi does not filter, edit, publish or review Comments prior to their presence on the website. Comments do not reflect the views and opinions of Cori Taxi, its agents and/or affiliates. Comments reflect the views and opinions of the person who post their views and opinions. To the extent permitted by applicable laws, Cori Taxi shall not be liable for the Comments or for any liability, damages or expenses caused and/or suffered as a result of any use of and/or posting of and/or appearance of the Comments on this website.
+              Cori Taxi reserves the right to monitor all Comments and to remove any Comments which can be considered inappropriate, offensive or causes breach of these Terms and Conditions.
+              <p><strong>License</strong></p>  
+              Unless otherwise stated, Cori Taxi and/or its licensors own the intellectual property rights for all material on Cori Taxi. All intellectual property rights are reserved. You may access this from Cori Taxi for your own personal use subjected to restrictions set in these terms and conditions.
+            </p>
+        </section>
+    </div>
+</div>
+
+
+
+  <!----------------------------------------------------------------------------------------------hidden container   cookies-->
+  <div id="cookiescontainer" class="container-fluid cookies">
+    <div class="row">
+        <section id="footersection">
+            <h2 id="footertitles">Cookies</h2>
+            <p>
+              We employ the use of cookies. By accessing Cori Taxi, you agreed to use cookies in agreement with the Cori Taxi's Privacy Policy.
+              Most interactive websites use cookies to let us retrieve the user's details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.
+            <p><strong>You must not:</strong></p>
+              •	Republish material from Cori Taxi<br>
+              •	Sell, rent or sub-license material from Cori Taxi<br>
+              •	Reproduce, duplicate or copy material from Cori Taxi<br>
+              •	Redistribute content from Cori Taxi.
+              <br><br>
+              <p><strong> You warrant and represent that:</strong></p> 
+You are entitled to post the Comments on our website and have all necessary licenses and consents to do so;<br>
+•	The Comments do not invade any intellectual property right, including without limitation copyright, patent or trademark of any third party;<br>
+•	The Comments do not contain any defamatory, libelous, offensive, indecent or otherwise unlawful material which is an invasion of privacy<br>
+•	The Comments will not be used to solicit or promote business or custom or present commercial activities or unlawful activity.<br>
+You hereby grant Cori Taxi a non-exclusive license to use, reproduce, edit and authorize others to use, reproduce and edit any of your Comments in any and all forms, formats or media.
+<br><br>
+<p><strong>The following organizations may link to our Website without prior written approval:</strong></p>
+•	Government agencies;<br>
+•	Search engines;<br>
+•	News organizations;<br>
+•	Online directory distributors may link to our Website in the same manner as they hyperlink to the Websites of other listed businesses; <br>
+•	System wide Accredited Businesses except soliciting non-profit organizations, charity shopping malls, and charity fundraising groups which may not hyperlink to our Web site.<br>
+These organizations may link to our home page, to publications or to other Website information so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products and/or services; and (c) fits within the context of the linking party's site.
+<br><br>
+<p><strong>We may consider and approve other link requests from the following types of organizations:</strong></p> 
+•	commonly-known consumer and/or business information sources;<br>
+•	dot.com community sites;<br>
+•	associations or other groups representing charities;<br>
+•	online directory distributors;<br>
+•	internet portals;<br>
+•	accounting, law and consulting firms; <br>
+•	educational institutions and trade associations.
+We will approve link requests from these organizations if we decide that: (a) the link would not make us look unfavorably to ourselves or to our accredited businesses; (b) the organization does not have any negative records with us; (c) the benefit to us from the visibility of the hyperlink compensates the absence of Cori Taxi; and (d) the link is in the context of general resource information.
+These organizations may link to our home page so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products or services; and (c) fits within the context of the linking party's site.
+If you are one of the organizations listed in paragraph 2 above and are interested in linking to our website, you must inform us by sending an e-mail to Cori Taxi. Please include your name, your organization name, contact information as well as the URL of your site, a list of any URLs from which you intend to link to our Website, and a list of the URLs on our site to which you would like to link. Wait 2-3 weeks for a response.
+<br><br>
+<p><strong>Approved organizations may hyperlink to our Website as follows:</strong></p>
+•	By use of our corporate name; or<br>
+•	By use of the uniform resource locator being linked to; or<br>
+•	By use of any other description of our Website being linked to that makes sense within the context and format of content on the linking party's site.
+No use of Cori Taxi's logo or other artwork will be allowed for linking absent a trademark license agreement.
+<br><br>
+<p><strong>iFrames</strong></p>
+Without prior approval and written permission, you may not create frames around our Webpages that alter in any way the visual presentation or appearance of our Website.
+<br><br>
+<p><strong>Content Liability</strong></p>
+We shall not be hold responsible for any content that appears on your Website. You agree to protect and defend us against all claims that is rising on your Website. No link(s) should appear on any Website that may be interpreted as libelous, obscene or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any third party rights.
+<br><br>
+<p><strong>Reservation of Rights</strong></p>
+We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amend these terms and conditions and its linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.
+<br><br>
+<p><strong>Removal of links from our website</strong></p>
+If you find any link on our Website that is offensive for any reason, you are free to contact and inform us any moment. We will consider requests to remove links but we are not obligated to or so or to respond to you directly.
+We do not ensure that the information on this website is correct, we do not warrant its completeness or accuracy; nor do we promise to ensure that the website remains available or that the material on the website is kept up to date.
+<br><br>
+<p><strong>Disclaimer</strong></p>
+To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website. 
+<p><strong>Nothing in this disclaimer will:</strong></p>
+•	limit or exclude our or your liability for death or personal injury;<br>
+•	limit or exclude our or your liability for fraud or fraudulent misrepresentation;<br>
+•	limit any of our or your liabilities in any way that is not permitted under applicable law; or<br>
+•	exclude any of our or your liabilities that may not be excluded under applicable law.<br>
+The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer, including liabilities arising in contract, in tort and for breach of statutory duty.
+As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.
+
+            </p>
+        </section>
+    </div>
+</div>
+
+
+
+<!----------------------------------------------------------------------------------------------container   footer-->
+
+<div class="container-fluid footer d-flex align-items-center justify-content-center">
+  <div class="row footerrow d-flex align-items-center justify-content-center">
+  
+  
+      <a href="#bookingtermscontainer" id="toggleBookingtermscontainer" class="footerbutton">Booking Terms</a>
+      <a href="#privacypolicycontainer" id="togglePrivacyPolicyContainer" class="footerbutton">Privacy Policy</a>
+      <a href="#termsandconditionscontainer" id="toggleTermsAndConditionsContainer" class="footerbutton">Terms and Conditions</a>
+      <a href="#cookiescontainer" id="toggleCookiesContainer" class="footerbutton">Cookies</a>
+
+      
+<div class="bottomfooter">
+<p id="copyright">Copyright © 2024 Cori Taxi Ltd. </p>
+<p id="designcristian">Website Design by cristianrogozan@gmail.com</p>
+</div>
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--------------------------------------------------------------------------------top button-->
+<button onclick="topFunction()" id="myButton" title="Go to top">
+  <i class="fa-regular fa-circle-up fa-sm"></i>
+  </button>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.0/pikaday.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
